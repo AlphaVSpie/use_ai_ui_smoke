@@ -65,12 +65,10 @@ test('Pricing menu is visible and scrolls to pricing section', async ({ page }) 
   });
 
   await expect(pricingLink).toBeVisible();
-
   await pricingLink.click();
 
   await expect(pricingHeading).toBeInViewport();
 });
-
 
 test('Pricing section contains two main plans', async ({ page }) => {
   await page.goto('/');
