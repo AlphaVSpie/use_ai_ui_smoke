@@ -1,5 +1,5 @@
 
-# use.ai UI Smoke Tests (Playwright)
+# Valeriia Sukhanova use.ai UI Smoke Tests (Playwright)
 
 This repository contains automated UI smoke tests for **use.ai**, implemented with **Playwright**.  
 The goal of this test suite is to verify that the main UI elements of the landing page load correctly and that primary user flows work as expected.
@@ -87,3 +87,4 @@ npx playwright show-report
 
 ## 🙋 About This Project
 This repository was created to demonstrate UI smoke testing for **use.ai** using Playwright, with focus on stability, readability, and clear reporting.
+
