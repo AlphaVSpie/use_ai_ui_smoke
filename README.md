@@ -89,5 +89,7 @@ npx playwright show-report
 This repository was created to demonstrate UI smoke testing for **use.ai** using Playwright, with focus on stability, readability, and clear reporting.
 
 
-<img width="1435" height="732" alt="Screenshot 2025-11-13 at 12 15 08" src="https://github.com/user-attachments/assets/6720e9dc-7bd4-4aef-a1f9-afdf417e4ba0" />
-<img width="1440" height="688" alt="Screenshot 2025-11-13 at 12 14 34" src="https://github.com/user-attachments/assets/184ff74d-bee0-4ffa-8b5a-8332efc98d24" />
+<img width="1440" height="729" alt="Screenshot 2025-11-13 at 13 52 28" src="https://github.com/user-attachments/assets/ba0baf95-d385-42e3-ba81-224aeec382e6" />
+<img width="1438" height="680" alt="Screenshot 2025-11-13 at 13 52 12" src="https://github.com/user-attachments/assets/bce86589-9e12-46a2-882a-13f475284a1c" />
+
+
