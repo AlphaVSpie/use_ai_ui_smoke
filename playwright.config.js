@@ -9,7 +9,8 @@ module.exports = defineConfig({
     ['html', { open: 'never' }],
   ],
   use: {
-    baseURL: 'https://use.ai/',   
+    baseURL: 'https://use.ai/ru',
+    headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
   },
