@@ -1,13 +1,13 @@
 const { test, expect } = require('@playwright/test');
 
-test('main use.ai open and has title', async ({ page }) => {
+test('головна use.ai відкривається та має тайтл', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/Use/i);
   const heroHeading = page.getByRole('heading', { name: /Multi-Model/i });
   await expect(heroHeading).toBeVisible();
 });
 
-test('Sign In button is working', async ({ page }) => {
+test('Sign In кнопка працює', async ({ page }) => {
   await page.goto('/');
   const signIn = page.getByRole('link', { name: /Sign in/i });
   await expect(signIn).toBeVisible();
@@ -15,13 +15,13 @@ test('Sign In button is working', async ({ page }) => {
   await expect(page).toHaveURL(/login|signin|auth/i);
 });
 
-test('menu Features is visible', async ({ page }) => {
+test('меню Features відображається', async ({ page }) => {
   await page.goto('/');
   const features = page.getByRole('link', { name: /Features/i });
   await expect(features).toBeVisible();
 });
 
-test('models block is displayed', async ({ page }) => {
+test('блок моделей відображається', async ({ page }) => {
   await page.goto('/');
 
   await expect(page.getByText('GPT-4', { exact: true })).toBeVisible();
@@ -29,13 +29,13 @@ test('models block is displayed', async ({ page }) => {
   await expect(page.getByText('Anthropic', { exact: true })).toBeVisible();
 });
 
-test('footer is visible', async ({ page }) => {
+test('футер відображається', async ({ page }) => {
   await page.goto('/');
   const footer = page.getByRole('contentinfo');
   await expect(footer).toBeVisible();
 });
 
-test('logo use.ai is clickable', async ({ page }) => {
+test('логотип use.ai клікабельний', async ({ page }) => {
   await page.goto('/');
 
   const logo = page.locator('nav a[href="/"]');
@@ -45,7 +45,7 @@ test('logo use.ai is clickable', async ({ page }) => {
   await expect(page).toHaveURL('/');
 });
 
-test('button Start Now redirect to chat page', async ({ page }) => {
+test('кнопка Start Now веде до сторінки чату', async ({ page }) => {
   await page.goto('/');
   const startNow = page.getByRole('link', { name: /Start Now/i });
   await expect(startNow).toBeVisible();
@@ -53,7 +53,7 @@ test('button Start Now redirect to chat page', async ({ page }) => {
   await expect(page).toHaveURL(/\/chat/);
 });
 
-test('Pricing menu is visible and scrolls to pricing section', async ({ page }) => {
+test('меню Pricing відображається та скролить до блоку тарифів', async ({ page }) => {
   await page.goto('/');
 
   const pricingLink = page
@@ -65,12 +65,14 @@ test('Pricing menu is visible and scrolls to pricing section', async ({ page }) 
   });
 
   await expect(pricingLink).toBeVisible();
+
   await pricingLink.click();
 
   await expect(pricingHeading).toBeInViewport();
 });
 
-test('Pricing section contains two main plans', async ({ page }) => {
+
+test('секція тарифів містить два основні плани', async ({ page }) => {
   await page.goto('/');
 
   const monthly = page.getByRole('heading', { name: /Monthly subscription/i });
@@ -80,13 +82,13 @@ test('Pricing section contains two main plans', async ({ page }) => {
   await expect(quarterly).toBeVisible();
 });
 
-test('FAQ contains questions about free usage', async ({ page }) => {
+test('FAQ містить питання про безкоштовне користування', async ({ page }) => {
   await page.goto('/');
   const question = page.getByText('Is it free to use?');
   await expect(question).toBeVisible();
 });
 
-test('Footer contains links to Privacy Policy and Terms & Conditions', async ({ page }) => {
+test('у футері є посилання на Privacy Policy та Terms & Conditions', async ({ page }) => {
   await page.goto('/');
 
   const privacy = page.getByRole('link', { name: 'Privacy Policy' });
@@ -96,7 +98,7 @@ test('Footer contains links to Privacy Policy and Terms & Conditions', async ({ 
   await expect(terms).toBeVisible();
 });
 
-test('Language switcher button for English is visible', async ({ page }) => {
+test('кнопка вибору мови English відображається', async ({ page }) => {
   await page.goto('/');
   const langButton = page.getByRole('button', { name: /English Select Language/i });
   await expect(langButton).toBeVisible();
